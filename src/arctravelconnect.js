@@ -5,7 +5,7 @@ import 'odometer';
 import 'owl.carousel';
 import ScrollReveal from 'scrollreveal'
 import 'typeit';
-import isotope from 'isotope-layout';
+var Isotope = require('isotope-layout');
 
 //var jq = jquery.noConflict( true );
 
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		});
 
 		//highlight isotope grid init
-		$('.iso-grid').isotope({
+		$('.iso-grid').Isotope({
 			// options
 			itemSelector: '.card',
 			layoutMode: 'fitRows'
