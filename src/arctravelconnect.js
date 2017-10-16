@@ -157,18 +157,18 @@ jq(document).ready(function(){
 
 	if(getUrlParameter("sponsors") == "true"){
 		
-		$("a.sticky-nav__link").eq(1).click();
+		jq("a.sticky-nav__link").eq(1).click();
 		jq.featherlight(jq(e), {});
 
 	}
 
 	if(getUrlParameter("connect") == "true"){
-		$("a.sticky-nav__link").eq(3).click();
+		jq("a.sticky-nav__link").eq(3).click();
 		jq.featherlight(jq(g), {});
 	}
 
 	if(getUrlParameter("speakers") == "true"){
-		$("a.sticky-nav__link").eq(2).click();
+		jq("a.sticky-nav__link").eq(2).click();
 		jq.featherlight(jq(f), {});
 	}
 
@@ -185,7 +185,7 @@ s.type = "text/javascript";
 s.src = "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit";
 s.defer = true;
 s.async = true;
-$("body").append(s);
+jq("body").append(s);
 
 
 
@@ -201,7 +201,7 @@ $("body").append(s);
  function validateCaptcha(formId, widget) {
         var Response = grecaptcha.getResponse(window[widget]);
         if (Response != null && Response != undefined && Response != "" && Response.length > 0) {
-           $("#formId").submit();
+           jq("#formId").submit();
         } else {
             jq("#" + widget).addClass('RecaptchaError');
             event.preventDefault();
