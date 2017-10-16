@@ -3,7 +3,7 @@ import 'featherlight';
 import 'leaflet';
 import 'odometer';
 import 'owl.carousel';
-import 'scrollreveal';
+import ScrollReveal from 'scrollreveal'
 import 'typeit';
 import 'isotope-layout';
 
