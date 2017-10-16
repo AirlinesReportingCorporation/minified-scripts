@@ -99,7 +99,15 @@ $(document).ready(function(){
 		});
 
 		//highlight isotope grid init
+		/*
 		$('.iso-grid').Isotope({
+			// options
+			itemSelector: '.card',
+			layoutMode: 'fitRows'
+		});*/
+		
+		var elem = document.querySelector('.iso-grid');
+		var iso = new Isotope( elem, {
 			// options
 			itemSelector: '.card',
 			layoutMode: 'fitRows'
