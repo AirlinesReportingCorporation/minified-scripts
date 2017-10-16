@@ -7,17 +7,17 @@ import 'scrollreveal';
 import 'typeit';
 import 'isotope-layout';
 
-var jq = jQuery.noConflict( true );
+var jq = jquery.noConflict( true );
 
-jq(document).ready(function(){
+jq(document).ready(function($){
 
 		//jumbotron code
-		jq('.jumbotron__inside .block-header').html('<div><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
-		jq('.jumbotron .foreground .body').show();
-		jq('.jumbotron .foreground .ctaBtn').css('display', 'inline-block');
+		$('.jumbotron__inside .block-header').html('<div><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
+		$('.jumbotron .foreground .body').show();
+		$('.jumbotron .foreground .ctaBtn').css('display', 'inline-block');
 
 		//scrolling text code
-		jq('#statsText').typeIt({
+		$('#statsText').typeIt({
 			breakLines: false,
 			autoStart: false,
 			loop: true,
@@ -37,7 +37,7 @@ jq(document).ready(function(){
 
 		//Photo Carousel
 		/* commented out until photo block is put back on
-		jq(".owl-carousel").owlCarousel({
+		$(".owl-carousel").owlCarousel({
 			items:1,
 			loop: true,
 			margin: 10,
@@ -75,31 +75,31 @@ jq(document).ready(function(){
 				duration: 1000, 
 				animation: 'count',
 				beforeReveal: function (e){
-							 jq(".stats1 span").html(400);
-							 jq(".stats2 span").html(162);
-							 jq(".stats3 span").html(35);
-							 jq(".stats4 span").html(43);    
-							 jq(".stats5 span").html(77);               
+							 $(".stats1 span").html(400);
+							 $(".stats2 span").html(162);
+							 $(".stats3 span").html(35);
+							 $(".stats4 span").html(43);    
+							 $(".stats5 span").html(77);               
 				},
 				 beforeReset: function (e){
-							 jq(".stats1 span").html(400);
-							 jq(".stats2 span").html(162);
-							 jq(".stats3 span").html(35);
-							 jq(".stats4 span").html(43);        
-							 jq(".stats5 span").html(77);
+							 $(".stats1 span").html(400);
+							 $(".stats2 span").html(162);
+							 $(".stats3 span").html(35);
+							 $(".stats4 span").html(43);        
+							 $(".stats5 span").html(77);
 				},
 				afterReset: function (e){
-							 jq(".stats1 span").html(0);
-							 jq(".stats2 span").html(0);
-							 jq(".stats3 span").html(0);
-							 jq(".stats4 span").html(0);        
+							 $(".stats1 span").html(0);
+							 $(".stats2 span").html(0);
+							 $(".stats3 span").html(0);
+							 $(".stats4 span").html(0);        
 				},
 				format: 'd'
 
 		});
 
 		//highlight isotope grid init
-		jq('.iso-grid').isotope({
+		$('.iso-grid').isotope({
 			// options
 			itemSelector: '.card',
 			layoutMode: 'fitRows'
@@ -153,61 +153,62 @@ jq(document).ready(function(){
 	f = a + f;
 	g = c + g;
 
-        jq.featherlight.defaults.root = jq(".featherlight-holder")
+        $.featherlight.defaults.root = $(".featherlight-holder")
 
 	if(getUrlParameter("sponsors") == "true"){
 		
-		jq("a.sticky-nav__link").eq(1).click();
-		jq.featherlight(jq(e), {});
+		$("a.sticky-nav__link").eq(1).click();
+		$.featherlight($(e), {});
 
 	}
 
 	if(getUrlParameter("connect") == "true"){
-		jq("a.sticky-nav__link").eq(3).click();
-		jq.featherlight(jq(g), {});
+		$("a.sticky-nav__link").eq(3).click();
+		$.featherlight($(g), {});
 	}
 
 	if(getUrlParameter("speakers") == "true"){
-		jq("a.sticky-nav__link").eq(2).click();
-		jq.featherlight(jq(f), {});
+		$("a.sticky-nav__link").eq(2).click();
+		$.featherlight($(f), {});
 	}
+
+	//captcha
+
+	$("[src='https://www.google.com/recaptcha/api.js']").remove();
+	var s = document.createElement("script");
+	s.type = "text/javascript";
+	s.src = "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit";
+	s.defer = true;
+	s.async = true;
+	$("body").append(s);
+
+
+
+
+			var widget1;
+			var widget2;
+			var CaptchaCallback = function() {
+					widget1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LctuhgUAAAAAGnwAxFKCp0Sfk4lUvYWhmoNqJwp'});
+					widget2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6LdCD$UAAAAANAD5XfBVaD1Isd3zNkwcyKcADSi'});
+			};
+
+
+	 function validateCaptcha(formId, widget) {
+					var Response = grecaptcha.getResponse(window[widget]);
+					if (Response != null && Response != undefined && Response != "" && Response.length > 0) {
+						 $("#formId").submit();
+					} else {
+							$("#" + widget).addClass('RecaptchaError');
+							event.preventDefault();
+							return false;
+					}
+					
+					return false;
+
+			}
 
 
 
 
 });	
 
-//captcha
-
-jq("[src='https://www.google.com/recaptcha/api.js']").remove();
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.src = "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit";
-s.defer = true;
-s.async = true;
-jq("body").append(s);
-
-
-
-
-    var widget1;
-    var widget2;
-    var CaptchaCallback = function() {
-        widget1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LctuhgUAAAAAGnwAxFKCp0Sfk4lUvYWhmoNqJwp'});
-        widget2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6LdCDjQUAAAAANAD5XfBVaD1Isd3zNkwcyKcADSi'});
-    };
-
-
- function validateCaptcha(formId, widget) {
-        var Response = grecaptcha.getResponse(window[widget]);
-        if (Response != null && Response != undefined && Response != "" && Response.length > 0) {
-           jq("#formId").submit();
-        } else {
-            jq("#" + widget).addClass('RecaptchaError');
-            event.preventDefault();
-						return false;
-        }
-				
-				return false;
-
-    }
