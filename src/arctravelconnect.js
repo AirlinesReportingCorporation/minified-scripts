@@ -7,9 +7,9 @@ import 'scrollreveal';
 import 'typeit';
 import 'isotope-layout';
 
-var jq = jquery.noConflict( true );
+//var jq = jquery.noConflict( true );
 
-jq(document).ready(function($){
+$(document).ready(function(){
 
 		//jumbotron code
 		$('.jumbotron__inside .block-header').html('<div><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
