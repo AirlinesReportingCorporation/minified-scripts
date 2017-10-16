@@ -5,7 +5,7 @@ import 'odometer';
 import 'owl.carousel';
 import ScrollReveal from 'scrollreveal'
 import 'typeit';
-import 'isotope-layout';
+import isotope from 'isotope-layout';
 
 //var jq = jquery.noConflict( true );
 
