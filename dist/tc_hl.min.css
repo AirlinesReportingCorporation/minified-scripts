@@ -8,12 +8,12 @@ body h2 {
 .jumbotron {
   height: auto !important;
   min-height: 0 !important;
-  padding: 20px 0; }
+  padding: 40px 0; }
 
 .custom-brow {
   padding: 5px; }
   .custom-brow a {
-    color: #f6f6f6;
+    color: #2e2563;
     font-size: .8rem; }
   .custom-brow span {
     font-family: SourceSansPro-Bold;
@@ -22,7 +22,7 @@ body h2 {
     font-size: 1rem; }
 
 .custom-brow a:hover, .custom-brow a:focus, .custom-brow a:visited {
-  color: #f6f6f6; }
+  color: #2e2563; }
 
 .jumbotron .foreground .block-header, .jumbotron .foreground--left .block-header, .jumbotron .foreground--right .block-header {
   margin-top: 10px; }
@@ -34,6 +34,6 @@ body h2 {
   .jumbotron__inside {
     max-width: 1150px; }
   .jumbotron .foreground .block-header, .jumbotron .foreground--left .block-header, .jumbotron .foreground--right .block-header {
-    font-size: 4rem; }
+    font-size: 3.7rem; }
   .jumbotron .foreground .body, .jumbotron .foreground--left .body, .jumbotron .foreground--right .body {
-    font-size: 2em; } }
+    font-size: 1.8em; } }
