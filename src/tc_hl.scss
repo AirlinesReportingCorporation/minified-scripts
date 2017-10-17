@@ -1,0 +1,57 @@
+.basic-text .basic-text-inside{
+  max-width: 1150px;
+  padding: 60px 20px;
+}
+
+body h2{
+  font-family: SourceSansPro-Bold;
+}
+
+.jumbotron{
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 20px 0;
+}
+
+.custom-brow {
+
+	padding:5px; 
+	
+	a{
+		color: #2e2563;
+		font-size: .8rem;
+	}
+	
+	span{
+		font-family: SourceSansPro-Bold;
+		text-transform: uppercase;
+		margin-left: 10px;
+		font-size: 1rem;
+	}
+	
+}
+
+.custom-brow a:hover, .custom-brow a:focus, .custom-brow a:visited {
+  color: #2e2563;
+}
+
+.jumbotron .foreground .block-header, .jumbotron .foreground--left .block-header, .jumbotron .foreground--right .block-header {
+    margin-top: 10px;
+}
+
+.jumbotron .background .background--opacity {
+    background: -webkit-linear-gradient(top, transparent 10%, #000 100%);
+}
+
+@media screen and (min-width: 768px){
+
+	.jumbotron__inside {
+			max-width: 1150px;
+	}
+	.jumbotron .foreground .block-header, .jumbotron .foreground--left .block-header, .jumbotron .foreground--right .block-header {
+			font-size: 4rem;
+	}
+	.jumbotron .foreground .body, .jumbotron .foreground--left .body, .jumbotron .foreground--right .body {
+			font-size: 2em;
+	}
+}
