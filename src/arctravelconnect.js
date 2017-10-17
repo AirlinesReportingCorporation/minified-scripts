@@ -180,43 +180,5 @@ $(document).ready(function(){
 		$.featherlight($(f), {});
 	}
 
-	//captcha
-
-	$("[src='https://www.google.com/recaptcha/api.js']").remove();
-	var s = document.createElement("script");
-	s.type = "text/javascript";
-	s.src = "https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit";
-	s.defer = true;
-	s.async = true;
-	$("body").append(s);
-
-
-
-
-			var widget1;
-			var widget2;
-			var CaptchaCallback = function() {
-					widget1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LctuhgUAAAAAGnwAxFKCp0Sfk4lUvYWhmoNqJwp'});
-					widget2 = grecaptcha.render('RecaptchaField2', {'sitekey' : '6LdCD$UAAAAANAD5XfBVaD1Isd3zNkwcyKcADSi'});
-			};
-
-
-	 function validateCaptcha(formId, widget) {
-					var Response = grecaptcha.getResponse(window[widget]);
-					if (Response != null && Response != undefined && Response != "" && Response.length > 0) {
-						 $("#formId").submit();
-					} else {
-							$("#" + widget).addClass('RecaptchaError');
-							event.preventDefault();
-							return false;
-					}
-					
-					return false;
-
-			}
-
-
-
-
 });	
 
