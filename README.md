@@ -56,16 +56,16 @@ To add an additional module for scripts/css, add a js file under the `src/` dire
 ```javascript
 //webpack.config.js
 
-  module.exports = 
-		{
-		...
-			entry: {
-					tc: './src/arctravelconnect.js',
-					tc_hl: './src/arctravelconnect-highlights.js',
-					additional_module: './src/additional_module.js'
-			},
-		...
-		}
+module.exports = 
+  {
+    ...
+    entry: {
+      tc: './src/arctravelconnect.js',
+      tc_hl: './src/arctravelconnect-highlights.js',
+      additional_module: './src/additional_module.js'
+    },
+    ...
+  }
 ```
 
 To import styles just import the stylesheet into the js file created:
