@@ -1,5 +1,7 @@
 # ARC Webpack Scripts
-Minified Scripts used for ARC Travel Connect
+Minified Scripts used for ARC Travel Connect.  
+
+This repository uses [https://webpack.js.org/](webpack) as the primary bundler with [https://babeljs.io/](babel) to provide support for ES6 syntax.  In addition, it also uses [http://sass-lang.com/](SASS) to as a css pre-compiler. The output directory for compiled files go to the `dist/` directory.
 
 ## Install
 Clone the git repository and make sure to install the node modules:
@@ -12,29 +14,32 @@ cd minified-scripts
 npm install
 ```
 
-#  Usage
+## Usage
 To compile use:
 
 ```shell
 npm start
 ```
 
+This command runs `npm webpack` in context and compiles all source files in `src/` to the `dist/` directory for production.
+
 ### Folder Structure
 ```
 minified-scripts/
 |
 |-- src/
-|  |-- arctravelconnect.js
-|  |-- arctravelconnect-highlights.js
-|  |-- tc.scss
-|  |-- tc-hl.scss
-|  |-- partials / 
+|   |-- arctravelconnect.js
+|   |-- arctravelconnect-highlights.js
+|   |-- tc.scss
+|   |-- tc-hl.scss
+|   |-- partials / 
+|       |-- _TC-common.scss
 |
 |-- dist/
-|  |-- tc.min.js
-|  |-- tc-hl.min.js
-|  |-- tc.min.css
-|  |-- tc-hl.min.css
+|   |-- tc.min.js
+|   |-- tc-hl.min.js
+|   |-- tc.min.css
+|   |-- tc-hl.min.css
 |
 |-- webpack.config.js
 |
@@ -42,8 +47,32 @@ minified-scripts/
 
 ```
 
-## Javascript
-This repository uses [https://webpack.js.org/](webpack) as the primary bundler with [https://babeljs.io/](babel) to provide support for ES6 syntax.  Scripts compile to the `dist/` directory.
+### Config
+The webpack configuration file is located in the root as `webpack.config.js`. 
 
-## CSS
-This repository uses [http://sass-lang.com/](SASS) to as a css pre-compiler and compiles to the `dist/` directory.
+### Additional Moudles
+To add an additional module for scripts/css, add a js file under the `src/` directory and edit the `webpack.config.js` file.
+
+```javascript
+//webpack.config.js
+
+  module.exports = 
+		{
+		...
+			entry: {
+					tc: './src/arctravelconnect.js',
+					tc_hl: './src/arctravelconnect-highlights.js',
+					additional_module: './src/additional_module.js'
+			},
+		...
+		}
+```
+
+To import styles just import the stylesheet into the js file created:
+
+```javascript
+//additional_module.js
+
+import './additional_module.scss';
+
+```
