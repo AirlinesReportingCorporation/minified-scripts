@@ -40,7 +40,12 @@ body h2{
 }
 
 .jumbotron .background .background--opacity {
-    background: -webkit-linear-gradient(top, transparent 10%, #000 100%);
+    background: #333333;
+    background: -webkit-linear-gradient(to bottom right, #002554, #AA0061);
+    background: -o-linear-gradient(to bottom right, #002554, #AA0061);
+    background: -moz-linear-gradient(to bottom right, #002554, #AA0061);
+    background: linear-gradient(to bottom right, #002554, #AA0061);
+		opacity: 0.6;
 }
 
 @media screen and (min-width: 768px){
