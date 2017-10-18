@@ -1,3 +1,7 @@
+[![](https://data.jsdelivr.com/v1/package/gh/AirlinesReportingCorporation/minified-scripts/badge)](https://www.jsdelivr.com/package/gh/AirlinesReportingCorporation/minified-scripts)
+
+[![](https://travis-ci.org/AirlinesReportingCorporation/minified-scripts.svg?branch=master)](https://www.jsdelivr.com/package/gh/AirlinesReportingCorporation/minified-scripts)
+
 # ARC Webpack Scripts
 Minified Scripts used for ARC Travel Connect.  
 
