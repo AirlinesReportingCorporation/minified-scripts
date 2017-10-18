@@ -48,7 +48,7 @@ minified-scripts/
 ```
 
 ### Config
-The webpack configuration file is located in the root as `webpack.config.js`. 
+The webpack configuration file is located in the root as `webpack.config.js`. Any webpack options/loader configs should be made in this file.
 
 ### Additional Moudles
 To add an additional module for scripts/css, add a js file under the `src/` directory and edit the `webpack.config.js` file.
