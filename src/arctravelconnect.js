@@ -179,6 +179,14 @@ $(document).ready(function(){
 		$("a.sticky-nav__link").eq(2).click();
 		$.featherlight($(f), {});
 	}
+	
+	if(getUrlParameter("link") == "sponsors"){
+		$("a.sticky-nav__link").eq(1).click();
+	}
+
+	if(getUrlParameter("link") == "speakers"){
+		$("a.sticky-nav__link").eq(2).click();
+	}
 
 });	
 
