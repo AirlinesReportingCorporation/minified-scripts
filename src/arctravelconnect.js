@@ -7,8 +7,6 @@ import ScrollReveal from 'scrollreveal'
 import 'typeit';
 var Isotope = require('isotope-layout');
 
-//var jq = jquery.noConflict( true );
-
 $(document).ready(function(){
 
 		//jumbotron code
@@ -34,35 +32,6 @@ $(document).ready(function(){
 		.tiType('Fresh Persepectives').tiPause(1000)
 		.tiDelete()
 		.tiPause(500);
-
-		//Photo Carousel
-		/* commented out until photo block is put back on
-		$(".owl-carousel").owlCarousel({
-			items:1,
-			loop: true,
-			margin: 10,
-			autoplay: true,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
-			smartSpeed:550,
-			autoplayTimeout:6500,
-			nav:true,
-			dots: false,
-			responsive:{
-				0:{
-					items:1
-				},
-				768:{
-					items:3
-				},
-										960:{
-														items:3
-										}
-
-			},
-			autoplayHoverPause:true,
-			navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
-		});*/
 
 		//scroll reveal
 		window.sr = ScrollReveal({ reset: true });
@@ -178,6 +147,10 @@ $(document).ready(function(){
 	if(getUrlParameter("speakers") == "true"){
 		$("a.sticky-nav__link").eq(2).click();
 		$.featherlight($(f), {});
+	}
+	
+	if(getUrlParameter("link") == "highlights"){
+    $("a.sticky-nav__link").eq(0).click();
 	}
 	
 	if(getUrlParameter("link") == "sponsors"){
