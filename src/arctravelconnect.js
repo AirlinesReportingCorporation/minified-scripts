@@ -7,7 +7,7 @@ import ScrollReveal from 'scrollreveal'
 import 'typeit';
 var Isotope = require('isotope-layout');
 
-$(document).ready(function(){
+(function(){
 
 		//jumbotron code
 		$('.jumbotron__inside .block-header').html('<div><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
@@ -67,13 +67,6 @@ $(document).ready(function(){
 
 		});
 
-		//highlight isotope grid init
-		/*
-		$('.iso-grid').Isotope({
-			// options
-			itemSelector: '.card',
-			layoutMode: 'fitRows'
-		});*/
 		
 		var elem = document.querySelector('.iso-grid');
 		var iso = new Isotope( elem, {
@@ -130,13 +123,11 @@ $(document).ready(function(){
 	f = a + f;
 	g = c + g;
 
-        $.featherlight.defaults.root = $(".featherlight-holder")
+  $.featherlight.defaults.root = $(".featherlight-holder")
 
 	if(getUrlParameter("sponsors") == "true"){
-		
 		$("a.sticky-nav__link").eq(1).click();
 		$.featherlight($(e), {});
-
 	}
 
 	if(getUrlParameter("connect") == "true"){
@@ -161,5 +152,5 @@ $(document).ready(function(){
 		$("a.sticky-nav__link").eq(2).click();
 	}
 
-});	
+})(); 
 
