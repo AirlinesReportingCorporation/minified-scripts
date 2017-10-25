@@ -29,7 +29,7 @@ var Isotope = require('isotope-layout');
 		.tiDelete()
 		.tiType('Technology Shifts').tiPause(1000)
 		.tiDelete()
-		.tiType('Fresh Persepectives').tiPause(1000)
+		.tiType('Fresh Perspectives').tiPause(1000)
 		.tiDelete()
 		.tiPause(500);
 
