@@ -105,26 +105,7 @@ var Isotope = require('isotope-layout');
 					}
 			}
 	};
-
-	//form pop-up message set-up
-	var a = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/carrier.png'></div></div>";
-
-	var b = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/distribution.png'></div></div>";
-
-	var c = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/EMDs.png'></div></div>";
-
-	var e = "<div class='submission'><h3>Thank you for your interest in becoming a sponsor! <h3/>We look forward to working with you at TravelConnect 2018.</div>";
-
-	var f = "<div class='submission'><h3>Thank you for your interest in becoming a speaker! <h3/>We will contact you when we begin the content selection process for TravelConnect 2018.</div>";
-
-	var g = "<div class='submission'><h3>You are now connected! <h3/>We’ll keep you informed on the latest TravelConnect 2018 updates.</div>";
-
-	e = b + e;
-	f = a + f;
-	g = c + g;
-
-  $.featherlight.defaults.root = $(".featherlight-holder")
-
+	
 	if(getUrlParameter("sponsors") == "true"){
 		$("a.sticky-nav__link").eq(1).click();
 		$.featherlight($(e), {});
@@ -151,6 +132,27 @@ var Isotope = require('isotope-layout');
 	if(getUrlParameter("link") == "speakers"){
 		$("a.sticky-nav__link").eq(2).click();
 	}
+
+	//form pop-up message set-up
+	var a = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/carrier.png'></div></div>";
+
+	var b = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/distribution.png'></div></div>";
+
+	var c = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/EMDs.png'></div></div>";
+
+	var e = "<div class='submission'><h3>Thank you for your interest in becoming a sponsor! <h3/>We look forward to working with you at TravelConnect 2018.</div>";
+
+	var f = "<div class='submission'><h3>Thank you for your interest in becoming a speaker! <h3/>We will contact you when we begin the content selection process for TravelConnect 2018.</div>";
+
+	var g = "<div class='submission'><h3>You are now connected! <h3/>We’ll keep you informed on the latest TravelConnect 2018 updates.</div>";
+
+	e = b + e;
+	f = a + f;
+	g = c + g;
+
+  $.featherlight.defaults.root = $(".featherlight-holder");
+
+	
 
 })(); 
 
