@@ -1,5 +1,7 @@
 [![](https://data.jsdelivr.com/v1/package/gh/AirlinesReportingCorporation/minified-scripts/badge)](https://www.jsdelivr.com/package/gh/AirlinesReportingCorporation/minified-scripts)
 
+[![CircleCI](https://circleci.com/gh/AirlinesReportingCorporation/minified-scripts.svg?style=svg)](https://circleci.com/gh/AirlinesReportingCorporation/minified-scripts)
+
 [![](https://travis-ci.org/AirlinesReportingCorporation/minified-scripts.svg?branch=master)](https://www.jsdelivr.com/package/gh/AirlinesReportingCorporation/minified-scripts)
 
 # ARC Webpack Scripts
