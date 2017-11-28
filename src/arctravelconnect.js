@@ -34,11 +34,9 @@ var Isotope = require('isotope-layout');
 
 		//scroll reveal
 		window.sr = ScrollReveal({ reset: true });
-		sr.reveal('section .foreground', { duration: 1000 });
 		sr.reveal('.page-grid', { duration: 1000 });
 		sr.reveal('.blockquote', {duration: 1000});
 		sr.reveal('.contained-panel__innerContent', { duration: 1000 });
-		//sr.reveal('.iso-title', { duration: 1000 });
 		sr.reveal('.stats', { 
 				duration: 1000, 
 				animation: 'count',
