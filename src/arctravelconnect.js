@@ -9,7 +9,8 @@ var Isotope = require('isotope-layout');
 (function(){
 
 		//jumbotron code
-		$('.jumbotron__inside .block-header').html('<div><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
+		$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
+		$('.jumbotron').addClass('animated fadeIn');
 		$('.jumbotron .foreground .body').show();
 		$('.jumbotron .foreground .ctaBtn').css('display', 'inline-block');
 
