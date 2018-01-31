@@ -99,6 +99,8 @@ var Isotope = require('isotope-layout');
 		var f = "<div class='submission'><h3>Thank you for your interest in becoming a speaker! <h3/>We will contact you when we begin the content selection process for TravelConnect 2018.</div>";
 
 		var g = "<div class='submission'><h3>You are now connected! <h3/>We’ll keep you informed on the latest TravelConnect 2018 updates.</div>";
+		
+		var tcVid = "<iframe width='560' height='315' src='https://www.youtube.com/embed/j_JHHI-KRpE?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
 
 		e = b + e;
 		f = a + f;
@@ -148,6 +150,10 @@ var Isotope = require('isotope-layout');
 		if(getUrlParameter("link") == "speakers"){
 			$("a.sticky-nav__link").eq(2).click();
 		}
+		
+		$(".tc-video").click(function(){
+			$.featherlight($(tcVid), {});
+		});
 	
 	});
 
