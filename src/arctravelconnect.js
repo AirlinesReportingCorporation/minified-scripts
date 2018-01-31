@@ -152,7 +152,7 @@ var Isotope = require('isotope-layout');
 		}
 		
 		$(".tc-video").click(function(){
-			$.featherlight($(tcVid), {});
+			$.featherlight($(tcVid), {root: ".featherlight-video-holder"});
 		});
 	
 	});
