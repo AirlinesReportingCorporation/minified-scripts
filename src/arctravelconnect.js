@@ -9,12 +9,14 @@ var Isotope = require('isotope-layout');
 (function(){
 
 		//jumbotron code
-		$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
+		//$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
+		('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><h3 style="color: #ffffff;">Highlights From</h3><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a><h2 style="color:#ffffff;font-size:40px;margin-left:20px;">2017</h2></div>');
 		$('.jumbotron .foreground').addClass('animated fadeIn');
 		$('.jumbotron .foreground .body').show();
 		$('.jumbotron .foreground .ctaBtn').css('display', 'inline-block');
 
 		//scrolling text code
+		/*
 		$('#statsText').typeIt({
 			breakLines: false,
 			autoStart: false,
@@ -32,7 +34,8 @@ var Isotope = require('isotope-layout');
 		.tiType('Fresh Perspectives').tiPause(1000)
 		.tiDelete()
 		.tiPause(500);
-
+		*/  
+		
 		//scroll reveal
 		window.sr = ScrollReveal({ reset: true });
 		sr.reveal('.stats', { 
