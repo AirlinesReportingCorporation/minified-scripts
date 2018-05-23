@@ -10,7 +10,7 @@ var Isotope = require('isotope-layout');
 
 		//jumbotron code
 		//$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a></div><span id="statsText"></span>');
-		$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><h3 style="color: #ffffff;">Highlights From</h3><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a><h2 style="color:#ffffff;font-size:40px;margin-left:20px;">2017</h2></div>');
+		//$('.jumbotron__inside .block-header').html('<div class="animated fadeIn"><h3 style="color: #ffffff;">Highlights From</h3><a href="http://arctravelconnect.com" class="logo travelconnectlogo icon-travelconnect-logo" title="logo"></a><h2 style="color:#ffffff;font-size:40px;margin-left:20px;">2017</h2></div>');
 		$('.jumbotron .foreground').addClass('animated fadeIn');
 		$('.jumbotron .foreground .body').show();
 		$('.jumbotron .foreground .ctaBtn').css('display', 'inline-block');
@@ -34,38 +34,39 @@ var Isotope = require('isotope-layout');
 		.tiType('Fresh Perspectives').tiPause(1000)
 		.tiDelete()
 		.tiPause(500);
-		*/  
-		
+		*/
+
 		//scroll reveal
 		window.sr = ScrollReveal({ reset: true });
-		sr.reveal('.stats', { 
-				duration: 1000, 
+		sr.reveal('.stats', {
+				duration: 1000,
 				animation: 'count',
 				beforeReveal: function (e){
 							 $(".stats1 span").html(400);
 							 $(".stats2 span").html(162);
 							 $(".stats3 span").html(35);
-							 $(".stats4 span").html(43);    
-							 $(".stats5 span").html(77);               
+							 $(".stats4 span").html(43);
+							 $(".stats5 span").html(77);
 				},
 				 beforeReset: function (e){
 							 $(".stats1 span").html(400);
 							 $(".stats2 span").html(162);
 							 $(".stats3 span").html(35);
-							 $(".stats4 span").html(43);        
+							 $(".stats4 span").html(43);
 							 $(".stats5 span").html(77);
 				},
 				afterReset: function (e){
 							 $(".stats1 span").html(0);
 							 $(".stats2 span").html(0);
 							 $(".stats3 span").html(0);
-							 $(".stats4 span").html(0);        
+							 $(".stats4 span").html(0);
+							 $(".stats5 span").html(0);
 				},
 				format: 'd'
 
 		});
 
-		
+
 		var elem = document.querySelector('.iso-grid');
 		var iso = new Isotope( elem, {
 			// options
@@ -87,9 +88,9 @@ var Isotope = require('isotope-layout');
 			accessToken: 'pk.eyJ1IjoiaWZhamFyZG8iLCJhIjoiY2o4MGJ5dHl3MjBpbzMzczBwd3EyeWV6ZiJ9.9LHEjhURIT4WFRpfc-rQRA'
 	}).addTo(mymap);
 
-	
+
 	$( document ).ready(function() {
-	
+
 		//form pop-up message set-up
 		var a = "<div class='fl-title'><div class='animated bounce'><img src='/globalassets/home2/thank-you/carrier.png'></div></div>";
 
@@ -102,7 +103,7 @@ var Isotope = require('isotope-layout');
 		var f = "<div class='submission'><h3>Thank you for your interest in becoming a speaker! <h3/>We will contact you when we begin the content selection process for TravelConnect 2018.</div>";
 
 		var g = "<div class='submission'><h3>You are now connected! <h3/>We’ll keep you informed on the latest TravelConnect 2018 updates.</div>";
-		
+
 		var tcVid = "<iframe width='' height='100%' src='https://www.youtube.com/embed/j_JHHI-KRpE?rel=0&amp;showinfo=0&autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
 
 		e = b + e;
@@ -126,7 +127,7 @@ var Isotope = require('isotope-layout');
 						}
 				}
 		};
-		
+
 		if(getUrlParameter("sponsors") == "true"){
 			$("a.sticky-nav__link").eq(1).click();
 			$.featherlight($(e), {});
@@ -141,11 +142,11 @@ var Isotope = require('isotope-layout');
 			$("a.sticky-nav__link").eq(2).click();
 			$.featherlight($(f), {});
 		}
-		
+
 		if(getUrlParameter("link") == "highlights"){
 			$("a.sticky-nav__link").eq(0).click();
 		}
-		
+
 		if(getUrlParameter("link") == "sponsors"){
 			$("a.sticky-nav__link").eq(1).click();
 		}
@@ -153,12 +154,11 @@ var Isotope = require('isotope-layout');
 		if(getUrlParameter("link") == "speakers"){
 			$("a.sticky-nav__link").eq(2).click();
 		}
-		
+
 		$(".tc-video").click(function(){
 			$.featherlight($(tcVid), {root: ".featherlight-video-holder"});
 		});
-	
+
 	});
 
-})(); 
-
+})();
