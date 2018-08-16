@@ -42,25 +42,25 @@ var Isotope = require('isotope-layout');
 				duration: 1000,
 				animation: 'count',
 				beforeReveal: function (e){
-							 $(".stats1 span").html(400);
-							 $(".stats2 span").html(162);
-							 $(".stats3 span").html(35);
-							 $(".stats4 span").html(43);
-							 $(".stats5 span").html(77);
+							 $(".stats1 span.odometer").html(400);
+							 $(".stats2 span.odometer").html(162);
+							 $(".stats3 span.odometer").html(35);
+							 $(".stats4 span.odometer").html(43);
+							 $(".stats5 span.odometer").html(77);
 				},
 				 beforeReset: function (e){
-							 $(".stats1 span").html(400);
-							 $(".stats2 span").html(162);
-							 $(".stats3 span").html(35);
-							 $(".stats4 span").html(43);
-							 $(".stats5 span").html(77);
+							 $(".stats1 span.odometer").html(400);
+							 $(".stats2 span.odometer").html(162);
+							 $(".stats3 span.odometer").html(35);
+							 $(".stats4 span.odometer").html(43);
+							 $(".stats5 span.odometer").html(77);
 				},
 				afterReset: function (e){
-							 $(".stats1 span").html(0);
-							 $(".stats2 span").html(0);
-							 $(".stats3 span").html(0);
-							 $(".stats4 span").html(0);
-							 $(".stats5 span").html(0);
+							 $(".stats1 span.odometer").html(0);
+							 $(".stats2 span.odometer").html(0);
+							 $(".stats3 span.odometer").html(0);
+							 $(".stats4 span.odometer").html(0);
+							 $(".stats5 span.odometer").html(0);
 				},
 				format: 'd'
 
